@@ -2,8 +2,20 @@ import type { List } from '../types'
 
 type CompareFn<T> = (x:T, y:T)=>boolean
 
-const lt: CompareFn<number|string> = (x, y)=>x<y
-const gt: CompareFn<number|string> = (x, y)=>x>y
+const lt: CompareFn<number|string> = (x, y) => x < y
+const gt: CompareFn<number|string> = (x, y) => x > y
+
+class OutOfRangeError extends Error {
+  constructor() {
+    super()
+  }
+}
+
+class IllegalIndexError extends Error {
+  constructor() {
+    super()
+  }
+}
 
 export default class ArrayList<T> implements List<T> {
   private cap = Number.MAX_SAFE_INTEGER
@@ -12,19 +24,28 @@ export default class ArrayList<T> implements List<T> {
 
   private resize() {}
 
+  private isIllegal(index:number) {
+    return index < 0 || index >= this.length
+  }
+
   constructor() 
   constructor(iterable:Iterable<T>)
   constructor(length:number, fillValue:T) 
-  constructor(lengthOrIterable?:number|Iterable<T>, fillValue?:T) {}
+  constructor(lengthOrIterable?:number|Iterable<T>, fillValue?:T) {
+    
+  }
 
   init() {}
 
   append(item:T) {
+    if(this.isFull()) throw ''
     this.items[this.length++] = item
   }
 
   insert(index:number, item:T) {
-    if(index < 0 || index >= this.length || this.length === this.cap) {}
+    if(this.isIllegal(index)) throw ''
+
+    if(this.isFull()) throw ''
 
     for(let i = this.length; i > index; i--) {
       this.items[i] = this.items[i-1]
@@ -54,7 +75,7 @@ export default class ArrayList<T> implements List<T> {
   }
 
   isFull() {
-    return this.length === this.cap
+    return this.length >= this.cap
   }
 
   get(index: number) {
