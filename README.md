@@ -17,13 +17,11 @@
 
 ## algorithm
 
-- [ ] search
-  - BinarySearch
-
-- [ ] sort
-  - BubbleSort
-  - InsertSort
-  - SelectSort
-  - QuickSort
-  - MergeSort
-  - HillSort
+| search | sort |
+| ---    | ---   |
+| BinarySearch | BubbleSort |
+|              | InsertSort |
+|              | SelectSort |
+|              | QuickSort |
+|              | MergeSort |
+|              | HillSort |
