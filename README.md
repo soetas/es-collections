@@ -2,6 +2,11 @@
 
 ## list
 
+- [ ] ArrayList
+- [ ] Stack
+- [ ] Queue
+- [ ] LinkedList
+
 ## map
 
 ## set
@@ -13,12 +18,12 @@
 ## algorithm
 
 - [ ] search
-  - [ ] BinarySearch
+  - BinarySearch
 
 - [ ] sort
-  - [ ] BubbleSort
-  - [ ] InsertSort
-  - [ ] SelectSort
-  - [ ] QuickSort
-  - [ ] MergeSort
-  - [ ] HillSort
+  - BubbleSort
+  - InsertSort
+  - SelectSort
+  - QuickSort
+  - MergeSort
+  - HillSort
