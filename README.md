@@ -12,11 +12,13 @@
 
 ## algorithm
 
-- [ ] find
+- [ ] search
+  - [ ] BinarySearch
 
 - [ ] sort
-  - [ ] bubbleSort
-  - [ ] insertSort
-  - [ ] selectSort
-  - [ ] quickSort
-  - [ ] mergeSort
+  - [ ] BubbleSort
+  - [ ] InsertSort
+  - [ ] SelectSort
+  - [ ] QuickSort
+  - [ ] MergeSort
+  - [ ] HillSort
