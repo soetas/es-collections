@@ -18,9 +18,13 @@ export default class Queue<T> {
     return item
   }
 
-  first() {}
+  first() {
+    return this.items[0]
+  }
 
-  last() {}
+  last() {
+    return this.items[this.items.length-1]
+  }
 
   isEmpty() {
     return this.front === 0 && this.rear === 0
@@ -31,10 +35,10 @@ export default class Queue<T> {
   }
 
   size() {
-    
+    return this.items.length
   }
 
   toString() {
-    
+    return `Queue { ${this.items.join(', ')} }`
   }
 }
