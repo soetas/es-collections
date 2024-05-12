@@ -5,7 +5,11 @@
 - [ ] ArrayList
 - [ ] Stack
 - [ ] Queue
+- [ ] PriorityQueue
 - [ ] LinkedList
+- [ ] StaticLinkedList
+- [ ] CircularLinkedList
+- [ ] DoublyLinkedList
 
 ## map
 
