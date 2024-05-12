@@ -1,4 +1,4 @@
-export class Queue<T> {
+export default class Queue<T> {
   private items:T[] = []
   private front = 0
   private rear = 0

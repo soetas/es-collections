@@ -1,6 +1,6 @@
 import { Node } from '../types'
 
-export class CircularLinkedList<T> {
+export default class CircularLinkedList<T> {
   private head:Omit<Node<T>, 'data'> = { prev:null, next:null }
   private tail: Node<T>|null = null
   private length = 0

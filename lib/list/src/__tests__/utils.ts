@@ -1,12 +1,10 @@
 import { describe, it, expect } from 'vitest'
-import HashSet from '../hashSet'
+import { dec2bin } from '../utils'
 
 describe('', ()=>{
   it('', ()=>{
-    const hashSet = new HashSet<number>()
-    
+
 
   })
 
 })
-

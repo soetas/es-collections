@@ -1,4 +1,4 @@
-export class PriorityQueue<T> {
+export default class PriorityQueue<T> {
   private items:[T, number][] = []
 
   enqueue(item:T, priority:number=Number.MIN_SAFE_INTEGER) {

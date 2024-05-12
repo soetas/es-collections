@@ -3,6 +3,7 @@
 ## list
 
 - [ ] ArrayList
+- [ ] SparseArray
 - [ ] Stack
 - [ ] Queue
 - [ ] PriorityQueue
@@ -13,7 +14,12 @@
 
 ## map
 
+- [ ] HashMap
+- [ ] TreeMap
+
 ## set
+
+- [ ] HashSet
 
 ## tree
 
@@ -24,8 +30,8 @@
 | search | sort |
 | ---    | ---   |
 | BinarySearch | BubbleSort |
-|              | InsertSort |
-|              | SelectSort |
+| LinearSearch | InsertSort |
+| InsertSearch | SelectSort |
 |              | QuickSort |
 |              | MergeSort |
 |              | HillSort |

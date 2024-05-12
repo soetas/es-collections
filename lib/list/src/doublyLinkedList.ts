@@ -1,6 +1,6 @@
 import { Node } from '../types'
 
-export class DoublyLinkedList<T> {
+export default class DoublyLinkedList<T> {
   private head:Omit<Node<T>, 'data'> = { next:null }
   private tail:Node<T>|null = null
   private length = 0

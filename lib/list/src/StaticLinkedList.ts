@@ -3,7 +3,7 @@ type StaticNode<T> = {
   cur: number
 }
 
-export class StaticLinkedList<T> {
+export default class StaticLinkedList<T> {
   private cap = Number.MAX_SAFE_INTEGER
   private items: StaticNode<T>[] = []
 

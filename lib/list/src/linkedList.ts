@@ -1,6 +1,6 @@
 import type { Node } from '../types'
 
-export class LinkedList<T> {
+export default class LinkedList<T> {
   private head: Omit<Node<T>, 'data'> = { next:null } 
   private length: number = 0
 
