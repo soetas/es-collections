@@ -4,21 +4,25 @@ export default class LinkedList<T> {
   private head: Omit<Node<T>, 'data'> = { next:null } 
   private length: number = 0
 
+  private isIllegal(index:number) {
+    return index < 0 || index >= this.length
+  }
+
   constructor()
   constructor(iterable:Iterable<T>)
   constructor(length:number, fillValue:T)
   constructor(lengthOrIterable?:number|Iterable<T>, fillValue?:T) {
     if(fillValue !== undefined) {
-      let tail = this.head
       for(let i = 0; i < (lengthOrIterable as number); i++) {
-        const node = { data:fillValue, next:null }
-        tail.next = node
-        tail = node
+        this.head.next = { data:fillValue, next:this.head.next }
         this.length++
       }
     } else if(lengthOrIterable) {
+      let temp = this.head
       for(const item of lengthOrIterable as Iterable<T>) {
-        this.head.next = { data:item, next:this.head.next }
+        const node = { data:item, next:null }
+        temp.next = node
+        temp = node
         this.length++
       }
     }
@@ -37,7 +41,7 @@ export default class LinkedList<T> {
   }
 
   insert(index:number, item:T) {
-    if(index < 0 || index >= this.length) {}
+    if(this.isIllegal(index)) throw ''
 
     if(index === 0) {
       const next = this.head.next
@@ -54,6 +58,7 @@ export default class LinkedList<T> {
         node = node.next
       }
     }
+
     this.length++
   }
   
@@ -141,11 +146,25 @@ export default class LinkedList<T> {
   }
 
   isEmpty() {
-    return this.length === 0
+    return this.head.next === null
   }
 
   size() {
     return this.length
+  }
+
+  sort() {
+    const len = this.size()
+    
+    for(let i = 0,current=this.head.next; i < len-1; i++, current=current!.next) {
+      for(let j = i+1, next=current?.next; j < len; j++, next=next?.next) {
+        if(current!.data > next!.data) {
+          const temp = current!.data
+          current!.data = next!.data
+          next!.data = temp
+        }
+      }
+    }
   }
 
   toString() {

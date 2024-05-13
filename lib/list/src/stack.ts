@@ -24,6 +24,11 @@ export default class Stack<T> {
     return this.top.next?.data
   }
 
+  clear() {
+    if(this.isEmpty()) return
+    
+  }
+
   isEmpty() {
     return this.top.next === null
   }

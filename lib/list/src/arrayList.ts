@@ -21,9 +21,7 @@ export default class ArrayList<T> implements List<T> {
   private cap = Number.MAX_SAFE_INTEGER
   private length = 0
   private items:T[] = []
-
-  private resize() {}
-
+  
   private isIllegal(index:number) {
     return index < 0 || index >= this.length
   }
@@ -44,7 +42,6 @@ export default class ArrayList<T> implements List<T> {
 
   insert(index:number, item:T) {
     if(this.isIllegal(index)) throw ''
-
     if(this.isFull()) throw ''
 
     for(let i = this.length; i > index; i--) {
@@ -89,7 +86,7 @@ export default class ArrayList<T> implements List<T> {
   }
 
   removeAt(index: number) {
-    if(this.length === 0 || index < 0 || index >= this.length) {}
+    if(this.isEmpty() || this.isIllegal(index)) throw ''
 
     const item = this.items[index]
 
