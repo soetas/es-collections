@@ -1,5 +1,15 @@
 # es-collections
 
+## outline
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 ## list
 
 - [ ] ArrayList
