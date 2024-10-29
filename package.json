@@ -1,13 +1,18 @@
 {
   "name": "es-collections",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    
+  },
   "keywords": [],
   "author": "sgk",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^22.8.2",
+    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^9.2.0",
     "execa": "^9.0.2",
     "husky": "^9.0.11",
